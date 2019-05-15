@@ -1,0 +1,8 @@
+{
+  "short_name": "@netless/oss-upload-manager",
+  "name": "@netless/oss-upload-manager",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
