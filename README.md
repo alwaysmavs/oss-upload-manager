@@ -53,29 +53,44 @@ const pptConverter: PptConverter = whiteWebSdk.pptConverter(this.props.netlessTo
    this.props.onProgress);
 ```
 
-| 成员方法 | 说明  | 参数类型   |
-| :------- | :------------ |:----- :|
-| convertFile     | 上传并转换文件 | rawFile: File, <br />pptConverter: PptConverter,<br />kind: PptKind,<br /> <br />target: {    <br /> bucket: string,    <br /> folder: string,   <br /> prefix: string,<br /> }, |
-| uploadImageFiles     | 上传图片，支持多张一起传 | imageFiles: File[], <br />x: number,<br />y: number |
+| 成员方法 | 说明  |
+| :------- | :------------ |
+| convertFile     | 上传并转换文件 |
+| uploadImageFiles     | 上传图片，支持多张一起传 |
 
 ```typescript
 // 上传文件
- uploadManager.convertFile(
-             event.file,
-             pptConverter,
-             PptKind.Static,
-             {
-                 bucket: oss.bucket,
-                 folder: oss.folder,
-                 prefix: oss.prefix,
-             })
+// 方法参数
+rawFile: File,
+pptConverter: PptConverter,
+kind: PptKind,
+target: {
+  bucket: string,
+  folder: string,
+  prefix: string,
+},
+
+uploadManager.convertFile(
+         event.file,
+         pptConverter,
+         PptKind.Static,
+         {
+             bucket: oss.bucket,
+             folder: oss.folder,
+             prefix: oss.prefix,
+         })
  
  // 上传文件图片到正中央位置
- const {clientWidth, clientHeight} = this.props.whiteboardRef;
- uploadManager.uploadImageFiles(
-     uploadFileArray,
-     clientWidth / 2,
-     clientHeight / 2)
+ // 方法参数
+ imageFiles: File[],
+ x: number,
+ y: number,
+ 
+const {clientWidth, clientHeight} = this.props.whiteboardRef;
+uploadManager.uploadImageFiles(
+uploadFileArray,
+clientWidth / 2,
+clientHeight / 2)
 ```
 
 
@@ -111,6 +126,7 @@ private uploadImage = (event: any) => {
                      .catch(error => alert("upload file error" + error));
     }
 ```
+
 
 
 ## License
