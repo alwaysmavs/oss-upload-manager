@@ -1,6 +1,6 @@
 {
   "name": "@netless/oss-upload-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "types": "dist/index.d.ts",
   "description": "alibaba cloud storage &amp; netless upload",
   "author": "alwaysmavs",
