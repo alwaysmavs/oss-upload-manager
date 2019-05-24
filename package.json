@@ -1,6 +1,6 @@
 {
   "name": "@netless/oss-upload-manager",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "types": "dist/index.d.ts",
   "description": "alibaba cloud storage &amp; netless upload",
   "author": "alwaysmavs",
@@ -27,7 +27,7 @@
     "@types/uuid": "^3.4.4",
     "ali-oss": "^6.1.1",
     "uuid": "^3.3.2",
-    "white-react-sdk": "^2.0.0-beta.10"
+    "white-react-sdk": "^2.0.0-beta.11"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
